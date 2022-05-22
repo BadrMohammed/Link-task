@@ -1,9 +1,9 @@
 import './assets/sass/mainStyle.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Switch } from 'react-router-dom';
-import AuthenticatedRoute from './routing/AuthenticatedRoute';
+import AuthenticatedRoute from './routing/Layout';
 import { changeLanguage, getLanguage } from './lang/local';
-import AuthenticatedLayout from './routing/AuthenticatedLayout/AuthenticatedLayout';
+import Layout from './routing/Layout/Layout';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 function App() {
@@ -11,7 +11,7 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
         <Switch>
-          <AuthenticatedRoute path='/' component={AuthenticatedLayout} />
+          <AuthenticatedRoute path='/' component={Layout} />
         </Switch>
       </BrowserRouter>
     </Provider>

@@ -59,6 +59,11 @@ a.link {
   }
 }
 
+.fullWH{
+  width: 100%;
+  height: 100%;
+}
+
 
 .page-container {
   width: 100%;
@@ -66,7 +71,23 @@ a.link {
 }
 
 
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.flex{
+  display: flex;
+}
+
+.alignItem{
+  align-items: center;
+}
+
+.justifyContent{
+  justify-content: center;
+}
 
 
 

@@ -2,5 +2,11 @@
   "lang": "en",
   "english": "الانجليزية",
   "arabic": "العربية",
-  "notFound": "404 page not found."
+  "notFound": "404 page not found.",
+  "home": "Home",
+  "aboutUs": "About us",
+  "news": "News",
+  "contactUs": "Contact us",
+  "media":"media",
+  "topNews":"Top News"
 }
