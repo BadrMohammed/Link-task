@@ -1,0 +1,10 @@
+
+
+.main-sidebar .pro-sidebar{
+    position: absolute;
+    top: 0px;
+    border-radius: 10px !important;
+  }
+  .main-sidebar .pro-sidebar > .pro-sidebar-inner{
+    border-start-end-radius: 10px;
+  }
