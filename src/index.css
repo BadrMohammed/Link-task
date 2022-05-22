@@ -1,0 +1,37 @@
+/* @font-face {
+  font-family: 'Almarai-Regular';
+  src: url('./assets/fonts/Almarai-Regular.ttf');
+}
+
+* {
+  font-family: 'Almarai-Regular' !important;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Almarai_regular';
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 1.6;
+  padding: 0;
+}
+
+#root {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box !important;
+} */
