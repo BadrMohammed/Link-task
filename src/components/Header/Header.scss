@@ -1,0 +1,15 @@
+.app-header{
+    & .app-logo{
+        width: 95px;
+        border-radius: 28px;
+    }
+
+    & .nav-item{
+        margin-inline: 15px;
+      }
+      
+      .nav-item a{
+        color: #000;
+      }
+      
+}

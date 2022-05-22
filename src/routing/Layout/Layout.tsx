@@ -7,7 +7,7 @@ import { useHistory } from 'react-router-dom';
 const Header = React.lazy(() => import('../../components/Header/Header'));
 const Sidebar = React.lazy(() => import('../../components/Sidebar/Sidebar'));
 
-function AuthenticatedLayout() {
+function Layout() {
   const [collapsed, setCollapsed] = useState<boolean>(false);
   const [toggled, setToggled] = useState<boolean>(false);
   const history = useHistory();
@@ -34,11 +34,11 @@ function AuthenticatedLayout() {
   return (
     <>
       <Suspense fallback={loading()}>
-        {/* <Header
+        <Header
           handleCollapsedChange={handleCollapsedChange}
           handleToggleSidebar={handleToggleSidebar}
           title={active}
-        /> */}
+        />
         {/* <Sidebar toggled={toggled} handleToggleSidebar={handleToggleSidebar} /> */}
       </Suspense>
 
@@ -64,4 +64,4 @@ function AuthenticatedLayout() {
   );
 }
 
-export default AuthenticatedLayout;
+export default Layout;
