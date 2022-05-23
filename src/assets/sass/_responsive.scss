@@ -1,62 +1,60 @@
 /************ Classes for mobile & tab screen ************/
 .hide--mobile {
-	@media #{$mwsm} {
-			display: none;
-	}
+  @media #{$mwsm} {
+    display: none;
+  }
 }
 
 .show--mobile {
-	display: none;
-	@media #{$mwsm} {
-			display: block;
-	}
+  display: none;
+  @media #{$mwsm} {
+    display: block;
+  }
 }
 
 .mobile-label {
-	display: none;
-	@media #{$mwsm} {
-			display: inline-block;
-			width: 30%;
-			font-size: 14px;
-	}
+  display: none;
+  @media #{$mwsm} {
+    display: inline-block;
+    width: 30%;
+    font-size: 14px;
+  }
 }
 
 .flex-mobile {
-	@media #{$mwsm} {
-			display: flex;
-	}
+  @media #{$mwsm} {
+    display: flex;
+  }
 }
 
 /************ Fixed header ************/
 header {
-	&.header {
-		@media #{$mwsm} {
-			position: fixed;
-			width: 100%;
-			z-index: 999;
-		}
-	}
+  &.header {
+    @media #{$mwsm} {
+      position: fixed;
+      width: 100%;
+      z-index: 999;
+    }
+  }
 }
 
-
 @media (min-width: 576px) {
-	.container {
-	  /* max-width:540px; */
-	}
+  .container {
+    /* max-width:540px; */
   }
-  @media (min-width: 768px) {
-	.container {
-	  max-width: 720px;
-	}
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
   }
-  @media (min-width: 992px) {
-	.container {
-	  max-width: 960px;
-	}
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
   }
-  @media (min-width: 1200px) {
-	.container {
-	  max-width: 1140px;
-	}
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
   }
-  
+}

@@ -1,16 +1,31 @@
 import { Col, Row } from 'reactstrap';
-import './footer.css';
-
-import logo from '../../assets/images/footer/footer-logo.png';
-import facebook from '../../assets/images/footer/face.png';
-import linkedin from '../../assets/images/footer/linked.png';
-import twitter from '../../assets/images/footer/twitter.png';
-import whats from '../../assets/images/footer/whats.png';
-
+import './footer.scss';
+import logo from '../../assets/images/logo.png';
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaGooglePlay,
+  FaApple,
+} from 'react-icons/fa';
 import { local } from '../../lang/local';
+import { CustomButton } from '../CustomButton/CustomButton';
+import React from 'react';
 export const Footer = () => {
+  const getSocalButtonTitle = (title1: string, title2: string, Icon: any) => {
+    return (
+      <React.Fragment>
+        <Icon size={20} color="#fff" />
+        <p className='mt-4 ml-2 mr-2'>
+          {local[title1]}
+          <p>{local[title2]}</p>
+        </p>
+      </React.Fragment>
+    );
+  };
   return (
     <section className='footer'>
+      {/* <div className='right-theme-box' style={rightReverse}/> */}
       <div className='container'>
         <Row>
           <Col
@@ -26,8 +41,11 @@ export const Footer = () => {
                 <img src={logo} alt='' className='imgFull center-footer-item' />
               </div>
             </div>
-            <p className='mt-4 footer-title'>{local.ZakeEstablished}</p>
-            <div className='mt-4 social-wrapper center-footer-item'>
+            <p className='mt-4 footer-title'>
+              We make technology produce productive, adaptable and sustainable
+              business experiences.
+            </p>
+            {/* <div className='mt-4 social-wrapper center-footer-item'>
               {[facebook, twitter, whats, linkedin].map((item, index) => {
                 return (
                   <div className='social-container'>
@@ -35,7 +53,7 @@ export const Footer = () => {
                   </div>
                 );
               })}
-            </div>
+            </div> */}
           </Col>
 
           <Col
@@ -47,13 +65,8 @@ export const Footer = () => {
             className='mx-auto mt-4 footer-section-column'
           >
             <div>
-              <h4 className='footer-section-title'>{local.Links}</h4>
-              {[
-                'AboutUs',
-                'Products',
-                'ShippingTransportation',
-                'OurOffices',
-              ].map((item, index) => {
+              <h2 className='footer-section-title'>{local.Company}</h2>
+              {['About', 'Careers', 'Mobile'].map((item, index) => {
                 return (
                   <div className='footer-section-item mt-4'>
                     <p key={index}>{local[item]}</p>
@@ -71,8 +84,8 @@ export const Footer = () => {
             className='mx-auto mt-4 footer-section-column'
           >
             <div>
-              <h4 className='footer-section-title'>{local.Address}</h4>
-              {['StreetAddress', 'ZipNumber'].map((item, index) => {
+              <h2 className='footer-section-title'>{local.Contact}</h2>
+              {['Help', 'Affilates'].map((item, index) => {
                 return (
                   <div className='footer-section-item mt-4'>
                     <p key={index}>{local[item]}</p>
@@ -91,16 +104,46 @@ export const Footer = () => {
             className='mx-auto mt-4 footer-section-column'
           >
             <div>
-              <h4 className='footer-section-title'>{local.PhoneMail}</h4>
-              {['01254565557', '01124597852', 'ZAK55@gmail.com'].map(
-                (item, index) => {
-                  return (
-                    <div className='footer-section-item mt-4'>
-                      <p key={index}>{item}</p>
-                    </div>
-                  );
-                }
-              )}
+              <h2 className='footer-section-title'>{local.Media}</h2>
+              {['News', 'Photo', 'Video'].map((item, index) => {
+                return (
+                  <div className='footer-section-item mt-4'>
+                    <p key={index}>{item}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </Col>
+
+          <Col
+            xl={3}
+            lg={3}
+            md={3}
+            sm={12}
+            xs={12}
+            className='mx-auto mt-4 footer-section-column'
+          >
+            <div className='social-wrapper center-footer-item'>
+              {[FaFacebookF, FaTwitter, FaInstagram].map((Item, index) => {
+                return (
+                  <div className='social-container' key={index}>
+                    <Item />
+                  </div>
+                );
+              })}
+            </div>
+            <div className='discover-text mt-3'>
+              <h3>{local.DiscoverApps}</h3>
+            </div>
+            <div className='flex'>
+              <CustomButton
+                className='social-button'
+                title={getSocalButtonTitle('getIt', 'googlePlay', FaGooglePlay)}
+              />
+              <CustomButton
+                className='social-button'
+                title={getSocalButtonTitle('avaliableOn', 'apple', FaApple)}
+              />
             </div>
           </Col>
         </Row>
