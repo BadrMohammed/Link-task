@@ -1,5 +1,44 @@
+
 .news-button {
+  color: rgba(15, 82, 110, 1);
+  background: rgba(227, 227, 227, 1) 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  border-color: transparent;
+  width: 100px;
 }
+
+.news-button:hover {
+  color: rgba(15, 82, 110, 1);
+  background: #fff;
+  border-color: #0eceff;
+}
+
+.news-button:active {
+  color: rgba(15, 82, 110, 1);
+  background: #fff;
+  border-color: #0eceff;
+  box-shadow: none;
+  outline: none;
+}
+
+.news-button:focus {
+  color: rgba(15, 82, 110, 1);
+  background: #fff;
+  border-color: #0eceff;
+  box-shadow: none;
+  outline: none;
+}
+
+.news-button-active {
+  color: #fff;
+  background: rgba(14, 206, 255, 1) 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  border-color: transparent;
+  width: 100px;
+  box-shadow: none;
+  outline: none;
+}
+
 
 .sign-button {
   background-color: transparent;
@@ -21,4 +60,14 @@
   font-size: 10px;
   margin-inline: 3px;
   margin-top: 5px;
+}
+
+
+.view-all-news-button{
+  background-color: #FF7C16;
+  border-color: transparent;
+  color: #fff;
+  font-size: 17px;
+  padding:8px 20px;
+
 }
