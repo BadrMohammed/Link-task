@@ -15,7 +15,7 @@ export const Footer = () => {
   const getSocalButtonTitle = (title1: string, title2: string, Icon: any) => {
     return (
       <React.Fragment>
-        <Icon size={20} color="#fff" />
+        <Icon size={20} color='#fff' />
         <p className='mt-4 ml-2 mr-2'>
           {local[title1]}
           <p>{local[title2]}</p>
@@ -145,6 +145,11 @@ export const Footer = () => {
                 title={getSocalButtonTitle('avaliableOn', 'apple', FaApple)}
               />
             </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col className='mx-auto center mt-5 rights-text'>
+            <p>{local.rights}</p>
           </Col>
         </Row>
       </div>

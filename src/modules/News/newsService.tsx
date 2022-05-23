@@ -16,7 +16,8 @@ const fetchCategories = (dispatch: Function) => {
     .finally(() => {});
 };
 
-const fetchNews = (dispatch: Function, id: any) => {
+const fetchNews = (dispatch: Function, id: any, setLoading: any) => {
+  setLoading(true);
   let url = '/d275425a434e02acf2f7';
 
   if (id) {
@@ -31,13 +32,16 @@ const fetchNews = (dispatch: Function, id: any) => {
           if (!id) {
             payload = { news: res.data.News, id: 0 };
           } else {
-            payload = { news: [res.data], id: 0 };
+            payload = { news: [res.data], id: id };
           }
           dispatch(newsSlice.actions.getNews(payload));
         }
       }
+      setLoading(false);
     })
-    .catch(({ err }) => {})
+    .catch(({ err }) => {
+      setLoading(false);
+    })
     .finally(() => {});
 };
 
