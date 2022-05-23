@@ -17,5 +17,21 @@
   "Art": "Art",
   "viewAllNews": "View All News",
   "signIn":"LogIn",
-  "signUp":"Sign Up"
+  "signUp":"Sign Up",
+  "Company":"Company",
+  "About":"About",
+  "Careers":"Careers",
+  "Mobile":"Mobile",
+  "Contact":"Contact",
+  "Help":"Help/FAQ",
+  "Affilates":"Affilates",
+  "Media":"Media",
+  "News":"News",
+  "Photo":"Photo",
+  "Video":"Video",
+  "DiscoverApps":"Discover our app",
+  "getIt":"Get It",
+  "googlePlay":"Google Play",
+  "avaliableOn":"Avaliable On",
+  "apple":"Apple"
 }
