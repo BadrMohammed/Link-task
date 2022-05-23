@@ -1,15 +1,61 @@
-.app-header{
-    & .app-logo{
-        width: 95px;
-        border-radius: 28px;
-    }
+@import '../../assets//sass//Variables';
+.app-header {
+  position: absolute;
+  top: 0px;
+  background-color: transparent;
+  width: 100%;
+  & .app-logo {
+    width: 95px;
+    border-radius: 28px;
+  }
 
-    & .nav-item{
-        margin-inline: 15px;
-      }
-      
-      .nav-item a{
-        color: #000;
-      }
-      
+  & .nav-item {
+    margin-inline: 15px;
+  }
+
+  .nav-item a {
+    color: #212832 !important;
+  }
 }
+
+
+.dropdown_header{
+  margin-inline: 15px;
+}
+
+.dropdown_header .dropdown-menu.show {
+  margin-top: 10px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+
+
+
+.dropdown_header hr {
+  background-color: #bcbcbc;
+  width: 100%;
+}
+
+.dropdown_header .button-toggle:active{
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  outline: navajowhite;
+}
+.dropdown_header .button-toggle:focus{
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  outline: navajowhite;
+}
+
+
+.dropdown_header ul li span {
+  color: #444444;
+}
+
+
+
+

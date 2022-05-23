@@ -13,23 +13,23 @@ export const Language = () => {
   useEffect(() => {
     if (!lang) {
       if (getLanguage() === 'ar') {
-        setLang('Arabic');
+        setLang('arabic');
       } else {
-        setLang('English');
+        setLang('english');
       }
     }
   }, []);
   const handleLang = (key: string) => {
     if (getLanguage() === 'ar' && key === 'en') {
       toogleLanguage('en');
-      setLang('English');
+      setLang('english');
     } else {
-      toogleLanguage('Arabic');
+      toogleLanguage('arabic');
     }
   };
   return (
     <UncontrolledDropdown direction='down' className='dropdown_header'>
-      <DropdownToggle caret className='button-toggle' color='light'>
+      <DropdownToggle  className='button-toggle' color='light'>
         {local[lang]}
       </DropdownToggle>
       <DropdownMenu end>
@@ -38,14 +38,14 @@ export const Language = () => {
           active={getLanguage() === 'en' ? true : false}
           onClick={() => handleLang('en')}
         >
-          {local.English}
+          {local.english}
         </DropdownItem>
         <DropdownItem
           className='text-center mt-3'
           active={getLanguage() === 'ar' ? true : false}
           onClick={() => handleLang('ar')}
         >
-          {local.Arabic}
+          {local.arabic}
         </DropdownItem>
       </DropdownMenu>
     </UncontrolledDropdown>

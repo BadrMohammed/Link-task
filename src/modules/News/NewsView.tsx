@@ -1,8 +1,25 @@
-import { Col, Row } from 'reactstrap';
+import { useState } from 'react';
+import {
+  Button,
+  Card,
+  CardBody,
+  CardImg,
+  CardSubtitle,
+  CardText,
+  CardTitle,
+  Col,
+  Row,
+} from 'reactstrap';
+import { CustomButton } from '../../components/CustomButton/CustomButton';
 import { local } from '../../lang/local';
 import './News.scss';
-export const NewsView = () => {
-    
+export const NewsView = ({ newsState, fetchNews, dispatch }: any) => {
+  const [view, setView] = useState<Number>(5);
+
+  const toggleView = (e: any, value: any) => setView(value);
+  const handleClick = (e: any, param: any) => {
+    fetchNews(dispatch, param);
+  };
   return (
     <section className='news-section'>
       <div className='container'>
@@ -11,58 +28,69 @@ export const NewsView = () => {
 
         <Row className='mt-4'>
           <Col xl={10} lg={10} md={12} sm={12} xs={12} className='mx-auto'>
-            {/* 
-          <Row className='mt-4'>
-            <Col xl={10} lg={10} md={12} sm={12} xs={12} className='mx-auto'>
-              <Row>
-                {[
-                  { type: 'text', title: 'FullName' },
-                  { type: 'text', title: 'Email' },
-                  { type: 'text', title: 'Mobile' },
-                  { type: 'text', title: 'City' },
-                ].map((item, index) => {
-                  return (
-                    <Col
-                      xl={5}
-                      lg={5}
-                      md={5}
-                      sm={12}
-                      xs={12}
+            <Row>
+              <Col className='center categories-column mt-3'>
+                <CustomButton
+                  title='allNews'
+                  onClick={(e: any) => handleClick(e, null)}
+                  id={0}
+                />
+              </Col>
+              {newsState.categories.map((item: any, index: any) => {
+                return (
+                  <Col className='center categories-column mt-3'>
+                    <CustomButton
                       key={index}
-                      className='mx-auto mt-4'
-                    >
-                      <CustomInput type={item.type} title={item.title} />
-                    </Col>
-                  );
+                      title={item.name}
+                      onClick={handleClick}
+                      param={item.id}
+                    />
+                  </Col>
+                );
+              })}
+            </Row>
+
+            <Row>
+              {newsState.news &&
+                newsState.news.map((item: any, index: any) => {
+                  if (index <= view) {
+                    return (
+                      <Col
+                        xl={4}
+                        lg={4}
+                        md={4}
+                        sm={6}
+                        xs={12}
+                        className='center mt-4'
+                        key={index}
+                      >
+                        <Card className='news-card'>
+                          <CardImg
+                            alt='Card image cap'
+                            src='https://picsum.photos/318/180'
+                            top
+                            width='100%'
+                          />
+                          <CardBody>
+                            <CardText>{item.title}</CardText>
+                            <CustomButton className='news-card-badge' />
+                          </CardBody>
+                        </Card>
+                      </Col>
+                    );
+                  }
                 })}
-              </Row>
-              <Row>
-                <Col
-                  xl={11}
-                  lg={11}
-                  md={11}
-                  sm={12}
-                  xs={12}
-                  className='mx-auto mt-4'
-                > 
-                  <CustomTextArea title='Inquiry' placeholder='WriteQuery' />
-                </Col>
-              </Row>
-              <Row>
-                <Col
-                  xl={12}
-                  lg={12}
-                  md={12}
-                  sm={12}
-                  xs={12}
-                  className='mx-auto center mt-4'
-                >
-                  <CustomButton label={local.Send}/>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-     */}
+            </Row>
+            <Row>
+              <Col className='mx-auto center mt-3'>
+                <CustomButton
+                  param={newsState.news ? newsState.news.length - 1 : 5}
+                  onClick={toggleView}
+                  className=''
+                  title='viewAllNews'
+                />
+              </Col>
+            </Row>
           </Col>
         </Row>
       </div>

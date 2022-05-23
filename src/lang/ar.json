@@ -1,12 +1,21 @@
 {
   "lang": "ar",
-  "english": "English",
-  "arabic": "Arabic",
+  "english": "الانجليزية",
+  "arabic": "العربية",
   "notFound": "الصفحة غير موجودة",
   "home": "الرئيسيه",
   "aboutUs": "من نحن",
   "news": "اخبار",
   "contactUs": "تواصل معنا",
-  "media":"اخبار",
-  "topNews":"اهم الاخبار"
+  "media": "اخبار",
+  "topNews": "اهم الاخبار",
+  "allNews": "جميع الاخبار",
+  "Technology": "تكنولوجيا",
+  "Sports": "رياضة",
+  "Health": "صحة",
+  "Economics": "اقتصاد",
+  "Art": "فن",
+  "viewAllNews": "عرض جميع الاخبار",
+  "signIn":"تسجيل الدخول",
+  "signUp":"انشاء حساب"
 }
