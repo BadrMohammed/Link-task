@@ -1,12 +1,21 @@
 {
   "lang": "en",
-  "english": "الانجليزية",
-  "arabic": "العربية",
+  "english": "EN",
+  "arabic": "Ar",
   "notFound": "404 page not found.",
   "home": "Home",
   "aboutUs": "About us",
   "news": "News",
   "contactUs": "Contact us",
-  "media":"media",
-  "topNews":"Top News"
+  "media": "media",
+  "topNews": "Top News",
+  "allNews": "all News",
+  "Technology": "Technology",
+  "Sports": "Sports",
+  "Health": "Health",
+  "Economics": "Economics",
+  "Art": "Art",
+  "viewAllNews": "View All News",
+  "signIn":"LogIn",
+  "signUp":"Sign Up"
 }

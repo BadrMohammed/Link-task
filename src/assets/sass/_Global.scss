@@ -89,7 +89,14 @@ a.link {
   justify-content: center;
 }
 
+.padding0{
+  padding: 0px !important;
+}
 
+.row {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
 
 .error {
   color: $danger;

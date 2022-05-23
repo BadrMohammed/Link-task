@@ -132,38 +132,6 @@ main {
 }
 
 
-.dropdown_header .dropdown-menu.show {
-  margin-top: 20px;
-  border: none;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border-radius: 10px;
-  padding: 15px 10px;
-  /* margin-inline-end: -80px; */
-}
-
-.dropdown_header .img_container {
-  width: 25px;
-  height: 25px;
-}
-.dropdown_header p {
-  margin-inline-start: 5px;
-}
-
-.dropdown_header hr {
-  background-color: #bcbcbc;
-  width: 100%;
-}
-
-.dropdown_header ul li {
-  color: #00be13;
-  list-style-type: disc;
-  align-items: left;
-}
-
-.dropdown_header ul li span {
-  color: #444444;
-  font-weight: bold;
-}
 
 .navbar-light .navbar-toggler {
   border: none !important;
