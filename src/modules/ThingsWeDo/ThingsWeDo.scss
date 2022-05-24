@@ -1,6 +1,15 @@
 .things-section {
   padding: 130px 0px;
   background: #efefef;
+  position: relative;
+
+  & .logo-container {
+    position: absolute;
+    width: 500px;
+    top: 0px;
+    margin-top: -30px;
+    margin-inline-start: -70px;
+  }
 
   .thing-item-container-1-photo-container {
     width: 20%;

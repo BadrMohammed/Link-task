@@ -5,27 +5,32 @@ import {
   FaFacebookF,
   FaTwitter,
   FaInstagram,
-  FaGooglePlay,
-  FaApple,
 } from 'react-icons/fa';
+import googleIcon from '../../assets/images/footer/google-icon.png'
+import appleIcon from '../../assets/images/footer/apple-icon.png'
+import bottomLogo from '../../assets/images/footer/bottom-logo.png'
+
+
 import { local } from '../../lang/local';
 import { CustomButton } from '../CustomButton/CustomButton';
 import React from 'react';
+import { rightReverse } from '../../styles/generalStyle';
 export const Footer = () => {
-  const getSocalButtonTitle = (title1: string, title2: string, Icon: any) => {
+  const getSocalButtonTitle = (title1: string, title2: string, photo: any) => {
     return (
       <React.Fragment>
-        <Icon size={20} color='#fff' />
-        <p className='mt-4 ml-2 mr-2'>
+        <span className='footer-button-photo-container'>
+        <img src={photo} alt="" className='imgFull' />
+        </span>
+        <span>
           {local[title1]}
-          <p>{local[title2]}</p>
-        </p>
+          <span style={{display:'block'}}>{local[title2]}</span>
+        </span>
       </React.Fragment>
     );
   };
   return (
     <section className='footer'>
-      {/* <div className='right-theme-box' style={rightReverse}/> */}
       <div className='container'>
         <Row>
           <Col
@@ -68,7 +73,7 @@ export const Footer = () => {
               <h2 className='footer-section-title'>{local.Company}</h2>
               {['About', 'Careers', 'Mobile'].map((item, index) => {
                 return (
-                  <div className='footer-section-item mt-4'>
+                  <div className='footer-section-item mt-4' key={index}>
                     <p key={index}>{local[item]}</p>
                   </div>
                 );
@@ -138,11 +143,11 @@ export const Footer = () => {
             <div className='flex'>
               <CustomButton
                 className='social-button'
-                title={getSocalButtonTitle('getIt', 'googlePlay', FaGooglePlay)}
+                title={getSocalButtonTitle('getIt', 'googlePlay', googleIcon)}
               />
               <CustomButton
                 className='social-button'
-                title={getSocalButtonTitle('avaliableOn', 'apple', FaApple)}
+                title={getSocalButtonTitle('avaliableOn', 'apple', appleIcon)}
               />
             </div>
           </Col>
@@ -152,6 +157,9 @@ export const Footer = () => {
             <p>{local.rights}</p>
           </Col>
         </Row>
+      </div>
+      <div className='logo-photo-container' style={rightReverse}>
+        <img src={bottomLogo} className="imgFull" alt=""/>
       </div>
     </section>
   );

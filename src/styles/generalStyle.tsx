@@ -20,3 +20,9 @@ export const rightReverse: CSS.Properties = {
 
 };
 
+export const right: CSS.Properties = {
+  right: getLanguage() === 'ar' ? '0px' : 'initial',
+  left: getLanguage() === 'en' ? '0px' :'initial',
+
+};
+

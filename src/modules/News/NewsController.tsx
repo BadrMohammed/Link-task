@@ -20,6 +20,7 @@ export const NewsController = () => {
       fetchNews={fetchNews}
       dispatch={dispatch}
       loading={loading}
+      setLoading={setLoading}
     />
   );
 };

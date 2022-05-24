@@ -1,29 +1,114 @@
+.carousel .control-dots {
+  text-align: start !important;
+  margin-right: 14% !important;
+  margin-left: 14% !important;
+}
+
+.carousel .control-dots .dot {
+  border: 1px solid #fff !important;
+  width: 35px !important;
+  border-radius: 100% !important;
+  height: 35px !important;
+  box-shadow: none !important;
+  margin-inline-start: 150px;
+}
+
+.carousel .control-dots .dot[value='0']::after {
+  content: url;
+}
+
+.carousel .control-dots .dot[value='0'] {
+  background-color: #f215b6 !important;
+}
+
+.carousel .control-dots .dot[value='1'] {
+  background-color: #a6e51c !important;
+}
+
+.carousel .control-dots .dot[value='2'] {
+  background-color: #ff7c16 !important;
+}
+.carousel .control-dots .dot.selected,
+.carousel .control-dots .dot:hover {
+  width: 40px !important;
+  height: 40px !important;
+}
+
 .home-section {
   width: 100%;
-  color: #fff;
   height: 100%;
-   
+  position: relative;
 
-  & .home-main{
-      padding: 30px;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  & .play-container {
+    height: fit-content;
+    width: fit-content;
   }
 
+  & .play-icon {
+    background-color: #e72228;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-inline-start: 25px;
+  }
+  & .play-title {
+    margin-inline-start: 10px;
+    color: #686d77;
+  }
 
-  & .icon-container{
-      max-width: 100%;
+  & .home-main {
+    padding-block: 50px;
+    width: 100%;
+    height: 100%;
+    text-align: start;
+
+    & .home-category {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    & .home-title {
+      color: #181e4b;
+      font-weight: bold;
+      font-size: 45px;
+      z-index: 2;
+    }
+
+    & .home-desc {
+      font-size: 16px;
+      color: #5e6282;
+    }
+  }
+
+  & .icon-container {
+    max-width: 100%;
+    position: absolute;
+    width: 36%;
+    top: 0px;
+    right: 0px;
+    height: 900px;
+    margin-top: -180px;
+    & .home-icon {
+      position: relative;
+      transition: transform 0.4s ease-in-out;
+    }
+    & .rotate {
+      transition: transform 0.4s ease-in-out;
+    }
+  }
+
+  & .dash-col {
+    position: relative;
+    & .dash-container-icon {
       position: absolute;
-      max-height: 100%;
-      width:35%;
-      height: 100%;
-    & .home-icon{
-        position: relative;
+      top: 0px;
+      margin-inline-end: -130px;
+      margin-top: 20px;
+      z-index: -1;
+    }
   }
- 
-}
-  
 }

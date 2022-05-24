@@ -15,12 +15,14 @@ import { RiCalendar2Fill } from 'react-icons/ri';
 import { FaRegHeart } from 'react-icons/fa';
 import { BsFillShareFill } from 'react-icons/bs';
 import { CustomBadge } from '../../components/CustomBadge/CustomBadge';
-export const NewsView = ({ newsState, fetchNews, dispatch, loading }: any) => {
+import logo from '../../assets/images/news/logo.png'
+import { rightReverse } from '../../styles/generalStyle';
+export const NewsView = ({ newsState, fetchNews, dispatch, loading ,setLoading}: any) => {
   const [view, setView] = useState<Number>(5);
 
   const toggleView = (e: any, value: any) => setView(value);
   const handleClick = (e: any, param: any) => {
-    fetchNews(dispatch, param);
+    fetchNews(dispatch, param,setLoading);
   };
 
   const getDefaultItem = (id: any) => {
@@ -35,12 +37,16 @@ export const NewsView = ({ newsState, fetchNews, dispatch, loading }: any) => {
   };
   return (
     <section className='news-section'>
+
+      <div className='logo-photo-container' style={rightReverse}>
+        <img src={logo} className="imgFull" alt=""/>
+      </div>
       <div className='container'>
         <h4 className='text-center first-title'>{local.media}</h4>
         <h1 className='text-center second-title mt-4'>{local.topNews}</h1>
 
         <Row className='mt-4'>
-          <Col xl={8} lg={8} md={10} sm={12} xs={12} className='mx-auto'>
+          <Col xl={9} lg={10} md={10} sm={12} xs={12} className='mx-auto'>
             <Row>
               <Col className='center categories-column mt-3' xl={2}>
                 <CustomButton
@@ -57,14 +63,13 @@ export const NewsView = ({ newsState, fetchNews, dispatch, loading }: any) => {
 
               {newsState.categories.map((item: any, index: any) => {
                 return (
-                  <Col className='center categories-column mt-3'>
+                  <Col className='center categories-column mt-3' key={index}>
                     <CustomButton
                       className={
                         +newsState.active_category === item.id
                           ? 'news-button-active news-button'
                           : 'news-button'
                       }
-                      key={index}
                       title={item.name}
                       onClick={handleClick}
                       param={item.id}
@@ -79,7 +84,7 @@ export const NewsView = ({ newsState, fetchNews, dispatch, loading }: any) => {
         <Row>
           <Col xl={10} lg={12} md={12} sm={12} xs={12} className='mx-auto text-center'>
           {loading ? (
-              <Spinner color='primary' className='' />
+              <Spinner color='primary' className='mt-5' />
             ) : (
               <React.Fragment>
                 <Row>

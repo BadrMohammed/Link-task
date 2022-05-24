@@ -1,10 +1,13 @@
-
 .news-button {
   color: rgba(15, 82, 110, 1);
   background: rgba(227, 227, 227, 1) 0% 0% no-repeat padding-box;
   border-radius: 10px;
   border-color: transparent;
   width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
 }
 
 .news-button:hover {
@@ -39,7 +42,6 @@
   outline: none;
 }
 
-
 .sign-button {
   background-color: transparent;
   color: #212832;
@@ -63,11 +65,36 @@
 }
 
 
-.view-all-news-button{
-  background-color: #FF7C16;
+.view-all-news-button {
+  background-color: #ff7c16;
   border-color: transparent;
   color: #fff;
-  font-size: 17px;
-  padding:8px 20px;
+  font-size: 13px;
+  padding: 13px 50px;
+  border-radius: 10px;
+  font-weight: normal;
+  border: 1px solid #ff7c16;
+}
 
+.view-all-news-button:active {
+  color: #ff7c16;
+  border: 1px solid #ff7c16;
+  background-color: #fff;
+}
+
+.view-all-news-button:hover {
+  color: #ff7c16;
+  border: 1px solid #ff7c16;
+  background-color: #fff;
+}
+
+.view-all-news-button:focus {
+  color: #ff7c16;
+  border: 1px solid #ff7c16;
+  background-color: #fff;
+}
+
+
+.search-button {
+  padding: 13px 20px;
 }

@@ -10,6 +10,20 @@
   opacity: 0.8;
   width: 100%;
   padding: 40px 0px;
+  position: relative;
+
+  & .logo-photo-container {
+    position: absolute;
+    bottom: 0px;
+    width: 300px;
+    overflow: hidden;
+    & img {
+      margin-block-end: -170px;
+      margin-inline-start: 170px;
+      background-position: 0 -450px; 
+
+    }
+  }
 
   & .logo-container {
     width: 130px;
@@ -26,13 +40,12 @@
   }
 
   & .footer-section-title {
-    // font-size: 20px;
+    font-size: 20px;
     line-height: 22.5px;
     color: #080809;
     font-weight: bold;
   }
   & .footer-section-item {
-    font-weight: bold;
     word-spacing: 3px;
     font-size: 18px;
     line-height: 10.5px;
@@ -68,9 +81,12 @@
     margin-inline: 10px;
   }
 
-  & .rights-text{
-    color: #5E6282;
+  & .rights-text {
+    color: #5e6282;
     font-size: 17px;
-    
+  }
+
+  & .footer-button-photo-container {
+    width: 18px;
   }
 }
