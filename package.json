@@ -19,12 +19,13 @@
     "env-cmd": "^10.1.0",
     "madge": "^5.0.1",
     "react": "^18.1.0",
-    "react-awesome-slider": "^4.1.0",
+    "react-custom-animation": "^1.0.4",
     "react-dom": "^18.1.0",
     "react-icons": "^4.3.1",
     "react-localization": "^1.0.19",
     "react-pro-sidebar": "^0.7.1",
     "react-redux": "^8.0.1",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^5.2.0",
     "react-scripts": "5.0.1",
     "react-select": "^5.3.2",
@@ -62,6 +63,8 @@
     ]
   },
   "devDependencies": {
+    "@types/aos": "^3.0.4",
+    "@types/react-animations": "^1.0.0",
     "@types/react-router-dom": "^5.3.3"
   }
 }

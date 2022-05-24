@@ -2,6 +2,7 @@ import w1 from '../assets/images/things/w1.png'
 import w2 from '../assets/images/things/w2.png'
 import w3 from '../assets/images/things/w3.png'
 import w4 from '../assets/images/things/w4.png'
+import w5 from '../assets/images/things/w5.png'
 
 export const _things = {
   data: {
@@ -39,7 +40,7 @@ export const _things = {
           id: '4',
           title: 'Transformation',
           desc: '',
-          photo: w4,
+          photo: w5,
         },
       ],
     },

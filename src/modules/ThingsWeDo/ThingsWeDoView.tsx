@@ -1,8 +1,8 @@
 import './ThingsWeDo.scss';
 import { Card, Col, Row } from 'reactstrap';
-import { dirRightReverse } from '../../styles/generalStyle';
+import { dirRightReverse, right } from '../../styles/generalStyle';
 import React from 'react';
-
+import logo from '../../assets/images/things/logo.png'
 export const ThingsWeDoView = ({ thingsState }: any) => {
   let newTitle = thingsState.things.title
     ? thingsState.things.title.split('  ')
@@ -53,17 +53,22 @@ export const ThingsWeDoView = ({ thingsState }: any) => {
     }
   };
 
-  const renderMobile = () => {
-    <React.Fragment>
-      <Row>
-        <Col>
-          <div className='thing-item-card-wrapper'>{renderCardContent()}</div>
-        </Col>
-      </Row>
-    </React.Fragment>;
-  };
+  // const renderMobile = () => {
+  //   <React.Fragment>
+  //     <Row>
+  //       <Col>
+  //         <div className='thing-item-card-wrapper'>{renderCardContent()}</div>
+  //       </Col>
+  //     </Row>
+  //   </React.Fragment>;
+  // };
   return (
     <section className='things-section center'>
+
+      <div className='logo-container' style={right}>
+        <img src={logo} alt="" className='imgFull'/>
+      </div>
+
       <div
         className='thing-item-container-1-photo-container'
         style={dirRightReverse}

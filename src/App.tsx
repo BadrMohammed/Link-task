@@ -1,5 +1,5 @@
-import './assets/sass/mainStyle.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/sass/mainStyle.scss';
 import { BrowserRouter, Switch } from 'react-router-dom';
 import AuthenticatedRoute from './routing/Layout';
 import { changeLanguage, getLanguage } from './lang/local';

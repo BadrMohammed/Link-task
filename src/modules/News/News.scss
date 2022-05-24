@@ -1,5 +1,12 @@
 .news-section {
   padding: 20px 40px;
+  position: relative;
+
+  & .logo-photo-container{
+    position: absolute;
+    top: 0px;
+    width: 300px;
+  }
 
   & .first-title {
     color: rgba(94, 98, 130, 1);

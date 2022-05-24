@@ -12,7 +12,8 @@
 :before {
   box-sizing: border-box !important;
 }
-.container {
+.container,
+.carousel .control-dots {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;

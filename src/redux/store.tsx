@@ -3,13 +3,15 @@ import thunkMiddleware from 'redux-thunk';
 import { errorActions, errorReducer } from './reducers/errorSlice';
 import { newsReducer, newsActions } from '../modules/News/newsSlice';
 import { thingsReducer, thingsActions } from '../modules/ThingsWeDo/thingsSlice';
+import { homeReducer,homeActions } from '../modules/Home/homeSlice';
 
 // Main store of the app.
 export const store = configureStore({
   reducer: {
     error: errorReducer,
     news:newsReducer,
-    things:thingsReducer
+    things:thingsReducer,
+    home:homeReducer
 
   },
   middleware: [thunkMiddleware],
@@ -38,6 +40,12 @@ export const newsSlice = {
   state: (state: RootState) => state.news,
   actions: newsActions,
   
+};
+
+
+export const homeSlice = {
+  state: (state: RootState) => state.home,
+  actions: homeActions,
 };
 
 
