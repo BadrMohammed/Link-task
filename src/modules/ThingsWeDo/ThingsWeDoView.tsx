@@ -1,7 +1,6 @@
 import './ThingsWeDo.scss';
 import { Card, Col, Row } from 'reactstrap';
 import { dirRightReverse, right } from '../../styles/generalStyle';
-import React from 'react';
 import logo from '../../assets/images/things/logo.png'
 export const ThingsWeDoView = ({ thingsState }: any) => {
   let newTitle = thingsState.things.title
@@ -43,7 +42,7 @@ export const ThingsWeDoView = ({ thingsState }: any) => {
             style={{ backgroundImage: `url(${item.photo})` }}
           >
             <div style={{ zIndex: 100 }}>
-              <h2 className='mt-5'>{item.title}</h2>
+              <p className='title'>{item.title}</p>
               <p>{item.desc}</p>
             </div>
             <div className='brightness-wrapper' />
@@ -52,16 +51,6 @@ export const ThingsWeDoView = ({ thingsState }: any) => {
       });
     }
   };
-
-  // const renderMobile = () => {
-  //   <React.Fragment>
-  //     <Row>
-  //       <Col>
-  //         <div className='thing-item-card-wrapper'>{renderCardContent()}</div>
-  //       </Col>
-  //     </Row>
-  //   </React.Fragment>;
-  // };
   return (
     <section className='things-section center'>
 

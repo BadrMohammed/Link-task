@@ -1,11 +1,15 @@
 .news-section {
   padding: 20px 40px;
   position: relative;
+  overflow: hidden;
 
   & .logo-photo-container{
     position: absolute;
     top: 0px;
-    width: 300px;
+    width: 400px;
+    height: 400px;
+    opacity: 0.7;
+    margin-inline-end: -170px;
   }
 
   & .first-title {

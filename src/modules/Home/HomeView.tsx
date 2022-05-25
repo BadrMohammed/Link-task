@@ -1,8 +1,8 @@
-import './Home.scss';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import './Home.scss';
 import { HomeBanner } from '../../assets/icons/HomeBanner';
 import { Row, Col } from 'reactstrap';
-import { dirRightReverse, rightReverse } from '../../styles/generalStyle';
+import { dashIconStyle, dirRightReverse, rightReverse } from '../../styles/generalStyle';
 import { Carousel } from 'react-responsive-carousel';
 import { local } from '../../lang/local';
 import { FaPlay } from 'react-icons/fa';
@@ -10,28 +10,31 @@ import { CustomButton } from '../../components/CustomButton/CustomButton';
 import { Rotate } from 'react-custom-animation';
 import h1 from '../../assets/images/home/h1.png';
 import { DashIcon } from '../../assets/icons/DashIcon';
+import { useState } from 'react';
 export const HomeView = ({ homeState, loading }: any) => {
-  const handleChange = () => {};
+
+  const [repeat,setRepeat]=useState<any>('infinite')
   return (
     <Carousel
       emulateTouch
       showArrows={false}
       showStatus={false}
-      showIndicators={true}
+      showIndicators
       swipeable
       useKeyboardArrows
-      onChange={handleChange}
-    >
+      showThumbs={false}
+      onSwipeStart={()=>setRepeat(false)}
+      onSwipeEnd={()=>setRepeat(true)}
+>
       {homeState.data &&
-        homeState.data.map((item: any) => {
+        homeState.data.map((item: any,index:any) => {
+  
           return (
-            <section className='home-section' key={item.order}>
+            <section className='home-section' key={index}>
               <div className='icon-container' style={rightReverse}>
-                <Rotate degRange={[0, 360]} duration={5000} repeat={1}>
+                <Rotate degRange={[0, 360]} duration={5000} repeat={repeat}>
                   <HomeBanner
-                    // width='0'
-                    // height='80'
-                    className='home-icon'
+                    className='home-icon imgFull'
                     fillColor={`#${item.colorCode}`}
                   />
                 </Rotate>
@@ -39,7 +42,7 @@ export const HomeView = ({ homeState, loading }: any) => {
 
               <div className='container'>
                 <div className='home-main'>
-                  <Row>
+                  <Row > 
                     <Col xl={6} lg={6} md={8} sm={12} xs={12}>
                       <Row>
                         <Col
@@ -60,15 +63,11 @@ export const HomeView = ({ homeState, loading }: any) => {
                           </h5>
                         </Col>
                         <Col
-                          className='mt-3 dash-col'
-                          xl={10}
-                          lg={10}
-                          md={10}
-                          sm={12}
-                          xs={12}
-                        >
+                          className='mt-3 dash-col'>
                           <h1 className='home-title'>{item.title}</h1>
-                          <div className='dash-container-icon' style={{right:'0px'}}>
+                          <div className='dash-container-icon' 
+                          style={dashIconStyle}
+                          >
                             <DashIcon
                               className='imgFull'
                               fillColor={`#${item.colorCode}`}
@@ -110,7 +109,6 @@ export const HomeView = ({ homeState, loading }: any) => {
                           src={h1}
                           className='imgFull'
                           alt=''
-                          style={{ float: 'right', zIndex: '10000000' }}
                         />
                       </div>
                     </Col>

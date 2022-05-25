@@ -1,21 +1,3 @@
-.carousel .control-dots {
-  text-align: start !important;
-  margin-right: 14% !important;
-  margin-left: 14% !important;
-}
-
-.carousel .control-dots .dot {
-  border: 1px solid #fff !important;
-  width: 35px !important;
-  border-radius: 100% !important;
-  height: 35px !important;
-  box-shadow: none !important;
-  margin-inline-start: 150px;
-}
-
-.carousel .control-dots .dot[value='0']::after {
-  content: url;
-}
 
 .carousel .control-dots .dot[value='0'] {
   background-color: #f215b6 !important;
@@ -74,7 +56,7 @@
     & .home-title {
       color: #181e4b;
       font-weight: bold;
-      font-size: 45px;
+      font-size: 59px;
       z-index: 2;
     }
 
@@ -87,14 +69,19 @@
   & .icon-container {
     max-width: 100%;
     position: absolute;
-    width: 36%;
+    width:670px;
     top: 0px;
-    right: 0px;
-    height: 900px;
-    margin-top: -180px;
+    overflow: hidden;
+
+
+
+    // width: 168px;
+    // height: 208px;
+    // overflow: hidden;
     & .home-icon {
       position: relative;
       transition: transform 0.4s ease-in-out;
+      opacity: 0.7;
     }
     & .rotate {
       transition: transform 0.4s ease-in-out;
@@ -106,8 +93,7 @@
     & .dash-container-icon {
       position: absolute;
       top: 0px;
-      margin-inline-end: -130px;
-      margin-top: 20px;
+      margin-top: 25px;
       z-index: -1;
     }
   }

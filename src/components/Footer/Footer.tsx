@@ -1,15 +1,10 @@
 import { Col, Row } from 'reactstrap';
 import './footer.scss';
 import logo from '../../assets/images/logo.png';
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-} from 'react-icons/fa';
-import googleIcon from '../../assets/images/footer/google-icon.png'
-import appleIcon from '../../assets/images/footer/apple-icon.png'
-import bottomLogo from '../../assets/images/footer/bottom-logo.png'
-
+import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import googleIcon from '../../assets/images/footer/google-icon.png';
+import appleIcon from '../../assets/images/footer/apple-icon.png';
+import bottomLogo from '../../assets/images/footer/bottom-logo.png';
 
 import { local } from '../../lang/local';
 import { CustomButton } from '../CustomButton/CustomButton';
@@ -20,11 +15,11 @@ export const Footer = () => {
     return (
       <React.Fragment>
         <span className='footer-button-photo-container'>
-        <img src={photo} alt="" className='imgFull' />
+          <img src={photo} alt='' className='imgFull' />
         </span>
         <span>
           {local[title1]}
-          <span style={{display:'block'}}>{local[title2]}</span>
+          <span style={{ display: 'block' }}>{local[title2]}</span>
         </span>
       </React.Fragment>
     );
@@ -74,7 +69,7 @@ export const Footer = () => {
               {['About', 'Careers', 'Mobile'].map((item, index) => {
                 return (
                   <div className='footer-section-item mt-4' key={index}>
-                    <p key={index}>{local[item]}</p>
+                    <p>{local[item]}</p>
                   </div>
                 );
               })}
@@ -92,8 +87,8 @@ export const Footer = () => {
               <h2 className='footer-section-title'>{local.Contact}</h2>
               {['Help', 'Affilates'].map((item, index) => {
                 return (
-                  <div className='footer-section-item mt-4'>
-                    <p key={index}>{local[item]}</p>
+                  <div className='footer-section-item mt-4' key={index}>
+                    <p>{local[item]}</p>
                   </div>
                 );
               })}
@@ -112,8 +107,8 @@ export const Footer = () => {
               <h2 className='footer-section-title'>{local.Media}</h2>
               {['News', 'Photo', 'Video'].map((item, index) => {
                 return (
-                  <div className='footer-section-item mt-4'>
-                    <p key={index}>{item}</p>
+                  <div className='footer-section-item mt-4' key={index}>
+                    <p>{item}</p>
                   </div>
                 );
               })}
@@ -137,10 +132,10 @@ export const Footer = () => {
                 );
               })}
             </div>
-            <div className='discover-text mt-3'>
-              <h3>{local.DiscoverApps}</h3>
+            <div className='discover-text mt-3 text-center'>
+              <h5>{local.DiscoverApps}</h5>
             </div>
-            <div className='flex'>
+            <div className='socials-buttons'>
               <CustomButton
                 className='social-button'
                 title={getSocalButtonTitle('getIt', 'googlePlay', googleIcon)}
@@ -159,7 +154,7 @@ export const Footer = () => {
         </Row>
       </div>
       <div className='logo-photo-container' style={rightReverse}>
-        <img src={bottomLogo} className="imgFull" alt=""/>
+        <img src={bottomLogo} className='imgFull' alt='' />
       </div>
     </section>
   );

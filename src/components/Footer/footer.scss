@@ -7,7 +7,6 @@
     rgba(255, 255, 255, 1),
     rgba(213, 174, 228, 0.1)
   );
-  opacity: 0.8;
   width: 100%;
   padding: 40px 0px;
   position: relative;
@@ -17,6 +16,7 @@
     bottom: 0px;
     width: 300px;
     overflow: hidden;
+    opacity: 0.6;
     & img {
       margin-block-end: -170px;
       margin-inline-start: 170px;
@@ -54,9 +54,11 @@
 
   & .social-wrapper {
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 
     & .social-container {
-      margin-inline: 10px;
+      // margin-inline: 10px;
       width: 38px;
       height: 38px;
       display: flex;
@@ -71,6 +73,7 @@
     & .discover-text {
       color: rgba(94, 98, 130, 1);
       font-weight: bolder;
+      font-size: 30px;
     }
   }
 

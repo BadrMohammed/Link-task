@@ -9,35 +9,41 @@
     top: 0px;
     margin-top: -30px;
     margin-inline-start: -70px;
+    opacity: 0.6;
   }
 
   .thing-item-container-1-photo-container {
-    width: 20%;
+    width: 16%;
     height: 150px;
+    margin: 0.2px;
   }
 
   .thing-item-container-2-photo-container {
-    width: 20%;
+    width: 16%;
+    margin:0.5;
     height: 400px;
     margin-bottom: -80px;
     text-align: right;
   }
 
   & .thing-item-container-3 {
-    width: 60%;
+    width: 70%;
     height: 100%;
     justify-content: space-between;
     background: #f215b6 0% 0% no-repeat padding-box;
   }
 
   & .thing-item-container-3-photo-container {
-    width: 30%;
+    width: 23%;
     height: 340px;
+    margin:0.5; 
     margin-top: -60px;
+    display: inline;
   }
   & .thing-item-card-wrapper {
     height: 400px;
     width: 70%;
+    position: relative;
 
     & .things-content-card {
       background: #f215b6 0% 0% no-repeat padding-box;
@@ -50,13 +56,11 @@
       & .title {
         color: #253776;
         font-weight: bolder;
-        font-size: 50px;
       }
 
       & .desc {
         margin-top: 8px;
         color: rgba(255, 255, 255, 0.8);
-        font-size: 25px;
       }
     }
   }
@@ -78,13 +82,25 @@
   }
 
   .photo-container {
-    width: 100%;
-    height: 200px;
+    max-width: 100%;
+    max-height: 210px;
+    min-height: 100px;
     position: relative;
     box-sizing: content-box;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     color: #fff;
+
+    & .title{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    font-weight: bold;
+    }
   }
+
+ 
 }

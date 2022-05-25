@@ -15,14 +15,20 @@ import { RiCalendar2Fill } from 'react-icons/ri';
 import { FaRegHeart } from 'react-icons/fa';
 import { BsFillShareFill } from 'react-icons/bs';
 import { CustomBadge } from '../../components/CustomBadge/CustomBadge';
-import logo from '../../assets/images/news/logo.png'
+import logo from '../../assets/images/news/logo.png';
 import { rightReverse } from '../../styles/generalStyle';
-export const NewsView = ({ newsState, fetchNews, dispatch, loading ,setLoading}: any) => {
+export const NewsView = ({
+  newsState,
+  fetchNews,
+  dispatch,
+  loading,
+  setLoading,
+}: any) => {
   const [view, setView] = useState<Number>(5);
 
   const toggleView = (e: any, value: any) => setView(value);
   const handleClick = (e: any, param: any) => {
-    fetchNews(dispatch, param,setLoading);
+    fetchNews(dispatch, param, setLoading);
   };
 
   const getDefaultItem = (id: any) => {
@@ -37,9 +43,8 @@ export const NewsView = ({ newsState, fetchNews, dispatch, loading ,setLoading}:
   };
   return (
     <section className='news-section'>
-
       <div className='logo-photo-container' style={rightReverse}>
-        <img src={logo} className="imgFull" alt=""/>
+        <img src={logo} className='imgFull' alt='' />
       </div>
       <div className='container'>
         <h4 className='text-center first-title'>{local.media}</h4>
@@ -82,8 +87,15 @@ export const NewsView = ({ newsState, fetchNews, dispatch, loading ,setLoading}:
         </Row>
 
         <Row>
-          <Col xl={10} lg={12} md={12} sm={12} xs={12} className='mx-auto text-center'>
-          {loading ? (
+          <Col
+            xl={12}
+            lg={12}
+            md={12}
+            sm={12}
+            xs={12}
+            className='mx-auto text-center mt-3'
+          >
+            {loading ? (
               <Spinner color='primary' className='mt-5' />
             ) : (
               <React.Fragment>
@@ -98,7 +110,7 @@ export const NewsView = ({ newsState, fetchNews, dispatch, loading ,setLoading}:
                             md={6}
                             sm={12}
                             xs={12}
-                            className='center mt-4'
+                            className='center mt-4 text-start'
                             key={index}
                           >
                             <Card className='news-card'>
@@ -141,16 +153,18 @@ export const NewsView = ({ newsState, fetchNews, dispatch, loading ,setLoading}:
                       }
                     })}
                 </Row>
-                <Row>
-                  <Col className='mx-auto center mt-5'>
-                    <CustomButton
-                      param={newsState.news ? newsState.news.length - 1 : 5}
-                      onClick={toggleView}
-                      className='view-all-news-button'
-                      title='viewAllNews'
-                    />
-                  </Col>
-                </Row>
+                {+newsState.active_category === 0 ? (
+                  <Row>
+                    <Col className='mx-auto center mt-5'>
+                      <CustomButton
+                        param={newsState.news ? newsState.news.length - 1 : 5}
+                        onClick={toggleView}
+                        className='view-all-news-button'
+                        title='viewAllNews'
+                      />
+                    </Col>
+                  </Row>
+                ) : null}
               </React.Fragment>
             )}
           </Col>

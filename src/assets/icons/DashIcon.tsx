@@ -1,5 +1,4 @@
 export const DashIcon = ({ fillColor, className, width, height }: any) => {
-  debugger
   return (
     <svg
       className={className}
@@ -24,7 +23,7 @@ export const DashIcon = ({ fillColor, className, width, height }: any) => {
       <g
         id='Rectangle_36-2'
         data-name='Rectangle 36'
-        clip-path='url(#clip-path)'
+        clipPath='url(#clip-path)'
       >
         <path
           id='Vector'

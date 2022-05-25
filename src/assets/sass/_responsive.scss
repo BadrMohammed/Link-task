@@ -1,29 +1,451 @@
-/************ Classes for mobile & tab screen ************/
-.hide--mobile {
-  @media #{$mwsm} {
+@media #{$xs} {
+  .header-web-items {
     display: none;
   }
-}
-
-.show--mobile {
-  display: none;
-  @media #{$mwsm} {
-    display: block;
-  }
-}
-
-.mobile-label {
-  display: none;
-  @media #{$mwsm} {
-    display: inline-block;
-    width: 30%;
-    font-size: 14px;
-  }
-}
-
-.flex-mobile {
-  @media #{$mwsm} {
+  .mobile-menu {
     display: flex;
+    align-items: center;
+  }
+  .carousel .control-dots {
+    @include control-dots;
+    margin-right: 0% !important;
+    margin-left: 0% !important;
+    justify-content: center !important;
+  }
+
+  .carousel .control-dots .dot {
+    @include control-dots-dot;
+  }
+
+  .carousel .control-dots .dot[value='0']::after {
+    @include control-dots-dot1-after;
+  }
+
+  .carousel .control-dots .dot[value='1']::after {
+    @include control-dots-dot2-after;
+  }
+
+  .things-content-card {
+    direction: initial !important;
+    & .title {
+      font-size: 20px;
+    }
+
+    & .desc {
+      font-size: 15px;
+    }
+  }
+
+  .things-section {
+    .photo-container {
+      height: 10px;
+      & .title {
+        font-size: 10px;
+      }
+    }
+  }
+  .footer-section-column {
+    text-align: center !important;
+  }
+  .socials-buttons {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .home-section {
+    & .icon-container {
+      margin-top: -90px;
+      margin-inline-end: -240px;
+    }
+  }
+}
+@media #{$mwsm} {
+  .header-web-items {
+    display: none;
+  }
+  .mobile-menu {
+    display: flex;
+    align-items: center;
+  }
+  .carousel .control-dots {
+    @include control-dots;
+    margin-right: 0% !important;
+    margin-left: 0% !important;
+    justify-content: center !important;
+  }
+
+  .carousel .control-dots .dot {
+    @include control-dots-dot;
+  }
+
+  .carousel .control-dots .dot[value='0']::after {
+    @include control-dots-dot1-after;
+  }
+
+  .carousel .control-dots .dot[value='1']::after {
+    @include control-dots-dot2-after;
+  }
+  .things-content-card {
+    direction: initial !important;
+    & .title {
+      font-size: 15px;
+    }
+
+    & .desc {
+      font-size: 10px;
+    }
+  }
+  .things-section {
+    .photo-container {
+      height: 150px;
+      & .title {
+        font-size: 10px;
+      }
+    }
+  }
+  .footer-section-column {
+    text-align: center !important;
+  }
+  .socials-buttons {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .home-section {
+    & .icon-container {
+      // margin-top: -140px;
+      // margin-inline-end: -400px;
+    }
+  }
+}
+@media #{$sm} {
+  .header-web-items {
+    display: none;
+  }
+  .mobile-menu {
+    display: flex;
+    align-items: center;
+  }
+  .carousel .control-dots {
+    @include control-dots;
+    margin-right: 0% !important;
+    margin-left: 0% !important;
+    justify-content: center !important;
+  }
+
+  .carousel .control-dots .dot {
+    @include control-dots-dot;
+  }
+
+  .carousel .control-dots .dot[value='0']::after {
+    @include control-dots-dot1-after;
+  }
+
+  .carousel .control-dots .dot[value='1']::after {
+    @include control-dots-dot2-after;
+  }
+  .things-content-card {
+    direction: initial !important;
+    & .title {
+      font-size: 20px;
+    }
+
+    & .desc {
+      font-size: 15px;
+    }
+  }
+  .things-section {
+    .photo-container {
+      height: 150px;
+      & .title {
+        font-size: 10px;
+      }
+    }
+  }
+  .footer-section-column {
+    text-align: center !important;
+  }
+  .socials-buttons {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+    .home-section {
+    & .icon-container {
+      margin-top: -140px;
+      margin-inline-end: -400px;
+    }
+  }
+}
+@media #{$md} {
+  .header-web-items {
+    display: none;
+  }
+  .mobile-menu {
+    display: flex;
+    align-items: center;
+  }
+  .carousel .control-dots {
+    @include control-dots;
+    margin-right: 0% !important;
+    margin-left: 0% !important;
+    justify-content: center !important;
+  }
+
+  .carousel .control-dots .dot {
+    @include control-dots-dot;
+  }
+
+  .carousel .control-dots .dot[value='0']::after {
+    @include control-dots-dot1-after;
+  }
+
+  .carousel .control-dots .dot[value='1']::after {
+    @include control-dots-dot2-after;
+  }
+
+  .things-content-card {
+    & .title {
+      font-size: 20px;
+    }
+
+    & .desc {
+      font-size: 20px;
+    }
+  }
+  .things-section {
+    .photo-container {
+      height: 150px;
+      & .title {
+        font-size: 13px;
+      }
+    }
+  }
+  .footer-section-column {
+    text-align: center !important;
+  }
+  .socials-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home-section {
+    & .icon-container {
+      margin-top: -200px;
+      margin-inline-end: -370px;
+    }
+  }
+}
+@media #{$mwmd} {
+  .header-web-items {
+    display: none;
+  }
+  .mobile-menu {
+    display: flex;
+    align-items: center;
+  }
+  .carousel .control-dots {
+    @include control-dots;
+    margin-right: 0% !important;
+    margin-left: 0% !important;
+    justify-content: center !important;
+  }
+
+  .carousel .control-dots .dot {
+    @include control-dots-dot;
+  }
+
+  .carousel .control-dots .dot[value='0']::after {
+    @include control-dots-dot1-after;
+  }
+
+  .carousel .control-dots .dot[value='1']::after {
+    @include control-dots-dot2-after;
+  }
+
+  .things-content-card {
+    & .title {
+      font-size: 20px;
+    }
+
+    & .desc {
+      font-size: 15px;
+    }
+  }
+
+  .things-section {
+    .photo-container {
+      height: 150px;
+      & .title {
+        font-size: 13px;
+      }
+    }
+  }
+  .footer-section-column {
+    text-align: center !important;
+  }
+  .socials-buttons {
+    display: flex;
+    align-items: initial;
+    justify-content: initial;
+  }
+}
+@media #{$mwlg} {
+  .mobile-menu,
+  .pro-sidebar {
+    display: none;
+  }
+  .carousel .control-dots {
+    @include control-dots;
+  }
+
+  .carousel .control-dots .dot {
+    @include control-dots-dot;
+  }
+
+  .carousel .control-dots .dot[value='0']::after {
+    @include control-dots-dot1-after;
+  }
+
+  .carousel .control-dots .dot[value='1']::after {
+    @include control-dots-dot2-after;
+  }
+
+  .things-content-card {
+    & .title {
+      font-size: 40px;
+    }
+
+    & .desc {
+      font-size: 20px;
+    }
+  }
+  .things-section {
+    .photo-container {
+      height: 210px;
+      & .title {
+        font-size: 15px;
+      }
+    }
+  }
+  .footer-section-column {
+    text-align: start;
+  }
+  .socials-buttons {
+    display: flex;
+    align-items: initial;
+    justify-content: initial;
+  }
+  .home-section {
+    & .icon-container {
+      margin-top: -250px;
+      margin-inline-end: -325px;
+    }
+  }
+}
+@media #{$lg} {
+  .mobile-menu,
+  .pro-sidebar {
+    display: none;
+  }
+  .carousel .control-dots {
+    @include control-dots;
+    margin-right: 5% !important;
+    margin-left: 5% !important;
+  }
+
+  .carousel .control-dots .dot {
+    @include control-dots-dot;
+  }
+
+  .carousel .control-dots .dot[value='0']::after {
+    @include control-dots-dot1-after;
+  }
+
+  .carousel .control-dots .dot[value='1']::after {
+    @include control-dots-dot2-after;
+  }
+
+  .things-section {
+    .photo-container {
+      height: 210px;
+      & .title {
+        font-size: 20px;
+      }
+    }
+  }
+  .footer-section-column {
+    text-align: start;
+  }
+  .socials-buttons {
+    display: flex;
+    align-items: initial;
+    justify-content: initial;
+  }
+  .home-section {
+    & .icon-container {
+      margin-top: -250px;
+      margin-inline-end: -310px;
+    }
+  }
+}
+
+@media #{$xl} {
+  .mobile-menu,
+  .pro-sidebar {
+    display: none;
+  }
+
+  .carousel .control-dots {
+    @include control-dots;
+  }
+
+  .carousel .control-dots .dot {
+    @include control-dots-dot;
+  }
+
+  .carousel .control-dots .dot[value='0']::after {
+    @include control-dots-dot1-after;
+  }
+
+  .carousel .control-dots .dot[value='1']::after {
+    @include control-dots-dot2-after;
+  }
+  .things-content-card {
+    & .title {
+      font-size: 45px;
+    }
+
+    & .desc {
+      font-size: 25px;
+    }
+  }
+
+  .things-section {
+    .photo-container {
+      height: 210px;
+      & .title {
+        font-size: 20px;
+      }
+    }
+  }
+  .footer-section-column {
+    text-align: start;
+  }
+  .socials-buttons {
+    display: flex;
+    align-items: initial;
+    justify-content: initial;
+  }
+
+  .home-section {
+    & .icon-container {
+      margin-top: -260px;
+      margin-inline-end: -170px;
+    }
   }
 }
 

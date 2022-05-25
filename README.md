@@ -1,46 +1,25 @@
-# Getting Started with Create React App
+Development Installation guide.
+project build using React Library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1- library  react js
+2- design helper reactstrap (react bootstrap)
+3- typescript
+4-state managment redux tollkit
+5-sass
+1 - Install the latest LTS versions of Node.js from https://nodejs.org 
 
-## Available Scripts
+2 - Clone the project on your machine, then from the terminal window go to the application directory then to the sub-directory called `Source` then run the following command `npm install` to install the dependencies as defined in the package.json file.
 
-In the project directory, you can run:
+3 - From the `Source` directory go to `env` folder and create `.env.development` file for environment variables, see the `.env.dist` as an example.
 
-### `npm start`
+4 - Then run `npm start` from `Source` root and it will run the application and navigate you to `http://localhost:3000/` server.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+5- to build project run `npm run build`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+6- projcect is build using mvc design patterns
 
-### `npm test`
+7- you can see the dependency digram for projcect inside documentationa folder
+to understand project structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+8- some images is missing in banners api (centered images)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
