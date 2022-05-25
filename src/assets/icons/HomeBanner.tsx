@@ -1,11 +1,10 @@
 export const HomeBanner = ({ fillColor, className, width, height }: any) => {
   return (
-
     <svg
       className={className}
       xmlns='http://www.w3.org/2000/svg'
-      width='822.575'
-      height='912.383'
+      // width='822.575'
+      // height='912.383'
       viewBox='0 0 822.575 912.383'
     >
       <path

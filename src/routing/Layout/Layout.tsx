@@ -8,7 +8,6 @@ const Header = React.lazy(() => import('../../components/Header/Header'));
 const Sidebar = React.lazy(() => import('../../components/Sidebar/Sidebar'));
 
 function Layout() {
-  const [collapsed, setCollapsed] = useState<boolean>(false);
   const [toggled, setToggled] = useState<boolean>(false);
   const history = useHistory();
   const [active, setActive] = useState<string>('');
@@ -21,9 +20,6 @@ function Layout() {
     );
   }, []);
 
-  const handleCollapsedChange = () => {
-    setCollapsed(!collapsed);
-  };
 
   const handleToggleSidebar = () => {
     setToggled(!toggled);
@@ -35,14 +31,13 @@ function Layout() {
     <>
       <Suspense fallback={loading()}>
         <Header
-          handleCollapsedChange={handleCollapsedChange}
           handleToggleSidebar={handleToggleSidebar}
           title={active}
         />
-        {/* <Sidebar toggled={toggled} handleToggleSidebar={handleToggleSidebar} /> */}
       </Suspense>
 
       <div className={`app ${toggled ? 'toggled' : ''}`}>
+      <Sidebar toggled={toggled} handleToggleSidebar={handleToggleSidebar} />
         <main>
           <div className='block'>
             <Switch>

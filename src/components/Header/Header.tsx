@@ -7,6 +7,7 @@ import logo from '../../assets/images/logo.png';
 import './Header.scss';
 import { CustomButton } from '../CustomButton/CustomButton';
 import { dirRightReverse } from '../../styles/generalStyle';
+import { _items } from '../../routing/items';
 
 const Header = ({ handleToggleSidebar }: any) => {
   const history = useHistory();
@@ -32,7 +33,6 @@ const Header = ({ handleToggleSidebar }: any) => {
   return (
     <Navbar expand='md' className='app-header'>
       <div className='fullWH'>
-        {/* {window.innerWidth > 760 ? ( */}
         <div className='container'>
           <Row className='alignItem'>
             <Col xl={2} lg={2} md={2} sm={2} xs={2}>
@@ -56,37 +56,23 @@ const Header = ({ handleToggleSidebar }: any) => {
               className='flex'
               style={dirRightReverse}
             >
-              {window.innerWidth < 760 ? (
-                <div className='mobile-menu'>
-                  <button
-                    className='toggler'
-                    onClick={handleMenuClick}
-                    style={{ display: 'block' }}
-                  >
-                    <FiMenu color='white' size={25} />
-                  </button>
-                </div>
-              ) : (
-                <div className='flex header-web-items'>
-                  <Language />
-                  <CustomButton title='signUp' className='sign-button' />
-                  {[
-                    { title: 'signIn', path: '' },
-                    { title: 'contactUs', path: '' },
-                    { title: 'news', path: '' },
-                    { title: 'aboutUs', path: '' },
-                    { title: 'home', path: '' },
-                  ].map((item, index) => {
-                    return renderNavItem(item.title, item.path, index);
-                  })}
-                </div>
-              )}
+              <div className='mobile-menu'>
+                <button onClick={handleMenuClick}>
+                  <FiMenu size={30} />
+                </button>
+                <Language />
+              </div>
+
+              <div className='flex header-web-items'>
+                <Language />
+                <CustomButton title='signUp' className='sign-button' />
+                {_items.map((item:any, index:any) => {
+                  return renderNavItem(item.title, item.path, index);
+                })}
+              </div>
             </Col>
           </Row>
         </div>
-        {/* ) : (
-          renderMobileHeader()
-        )} */}
       </div>
     </Navbar>
   );

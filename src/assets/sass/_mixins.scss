@@ -3,43 +3,82 @@
 ** Auto Add Prefixes To Properties
 */
 @mixin prefixer($property, $value, $prefixes: ()) {
-	@each $prifex in $prefixes {
-		#{'-' + $prifex + '-' + $property }: $value;
-	}
+  @each $prifex in $prefixes {
+    #{'-' + $prifex + '-' + $property }: $value;
+  }
 }
 /*
 ** Animation Mixin
 ** Auto Add Prefixes To Animations
 */
 @mixin keyFrame($animationName) {
-	@-webkit-keyframes #{$animationName} {
-		@content;
-	}
-	@-moz-keyframes #{$animationName} {
-		@content;
-	}
-	@-o-keyframes #{$animationName} {
-		@content;
-	}
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
 }
 
 @mixin sms-layout() {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	@content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @content;
 }
 
-@mixin circle($w: 20px, $h:20px, $font: 1rem) {
-	display: inline-block;
-	width: $w;
-	height: $h;
-	margin: 5px;
-	line-height: $h;
-	font-size: $font;
-	color: #ffffff;
-	background: #000000;
-	border-radius: 50%;
-	text-align: center;
-	@content
+@mixin circle($w: 20px, $h: 20px, $font: 1rem) {
+  display: inline-block;
+  width: $w;
+  height: $h;
+  margin: 5px;
+  line-height: $h;
+  font-size: $font;
+  color: #ffffff;
+  background: #000000;
+  border-radius: 50%;
+  text-align: center;
+  @content;
 }
+
+@mixin control-dots() {
+  margin-right: 11% !important;
+  margin-left: 11% !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+@mixin control-dots-dot() {
+  border: 1px solid #fff !important;
+  width: 35px !important;
+  border-radius: 100% !important;
+  height: 35px !important;
+  box-shadow: none !important;
+  margin-inline: 60px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+@mixin control-dots-dot1-after() {
+  content: '.......';
+  margin-inline-start: 165px !important;
+  font-size: 40px;
+  letter-spacing: 0.4rem;
+  margin-bottom: 20px;	
+  color: #353535;
+
+}
+
+@mixin control-dots-dot2-after() {
+	content: '.......';
+	margin-inline-start: 165px !important;
+	font-size: 40px;
+	letter-spacing: 0.4rem;
+	margin-bottom: 20px;
+	color: #353535;
+  }
+

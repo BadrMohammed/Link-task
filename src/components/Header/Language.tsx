@@ -20,30 +20,30 @@ export const Language = () => {
     }
   }, []);
   const handleLang = (key: string) => {
-    if (getLanguage() === 'ar' && key === 'en') {
-      toogleLanguage('en');
+    toogleLanguage(key);
+    if (key === 'en') {
       setLang('english');
     } else {
-      toogleLanguage('arabic');
+      setLang('arabic');
     }
   };
   return (
     <UncontrolledDropdown direction='down' className='dropdown_header'>
-      <DropdownToggle  className='button-toggle' color='light'>
+      <DropdownToggle  caret className='button-toggle' color='light'>
         {local[lang]}
       </DropdownToggle>
       <DropdownMenu end>
         <DropdownItem
           className='text-center'
           active={getLanguage() === 'en' ? true : false}
-          onClick={() => handleLang('en')}
+          onClick={() =>getLanguage() === 'ar'  ?handleLang('en'):null}
         >
           {local.english}
         </DropdownItem>
         <DropdownItem
           className='text-center mt-3'
           active={getLanguage() === 'ar' ? true : false}
-          onClick={() => handleLang('ar')}
+          onClick={() =>getLanguage() === 'en'  ?handleLang('ar'):null}
         >
           {local.arabic}
         </DropdownItem>

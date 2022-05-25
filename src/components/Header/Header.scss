@@ -4,24 +4,39 @@
   top: 0px;
   background-color: transparent;
   width: 100%;
-  & .app-logo {
-    width: 95px;
-    border-radius: 28px;
-  }
-
+  z-index: 10000;
   & .nav-item {
     margin-inline: 15px;
+
+    & a {
+      color: #212832 !important;
+      font-size: 13px;
+      border-bottom: 2px solid inherit;
+    }
+
+    & a:hover {
+      border-bottom: 2px solid #000;
+    }
   }
 
-  .nav-item a {
-    color: #212832 !important;
+  & .mobile-menu {
+    & button {
+      background-color: transparent;
+      border: transparent;
+      color: #212832;
+    }
   }
 }
 
-
-.dropdown_header{
+.dropdown_header {
   margin-inline: 15px;
-  z-index: 100000;
+
+  & .button-toggle {
+    background-color: transparent;
+    border: transparent;
+    color: #212832;
+    direction: ltr;
+  }
 }
 
 .dropdown_header .dropdown-menu.show {
@@ -32,31 +47,24 @@
   padding: 10px 10px;
 }
 
-
-
 .dropdown_header hr {
   background-color: #bcbcbc;
   width: 100%;
 }
 
-.dropdown_header .button-toggle:active{
+.dropdown_header .button-toggle:active {
   background-color: transparent;
   box-shadow: none;
   border: none;
   outline: navajowhite;
 }
-.dropdown_header .button-toggle:focus{
+.dropdown_header .button-toggle:focus {
   background-color: transparent;
   box-shadow: none;
   border: none;
   outline: navajowhite;
 }
-
 
 .dropdown_header ul li span {
   color: #444444;
 }
-
-
-
-
