@@ -3,7 +3,7 @@
   position: relative;
   overflow: hidden;
 
-  & .logo-photo-container{
+  & .logo-photo-container {
     position: absolute;
     top: 0px;
     width: 400px;
@@ -24,49 +24,77 @@
     font-size: 60px;
   }
 
-  .news-card {
-    background-color: #ffffff;
-    box-shadow: 0px 16px 26px #00000029;
-    border-radius: 24px;
-    height: 470px;
-    // width: 200px;
-    border: none;
-
-    & .new-card-image {
-      border-top-right-radius: inherit;
-      border-top-left-radius: inherit;
-      height: 370px;
-    }
-    & .card-text {
-      height: 80px;
-      color: #5e6282;
-      font-size: 17px;
-      font-weight: bold;
-    }
-    & .date-wrapper {
-      display: flex;
-
-      & .date-icon {
-        color: #13beff;
-        font-size: 25px;
-      }
-      & .date-text {
-        color: #707070;
-        font-size: 18px;
-        margin-inline-start: 10px;
-      }
-    }
-
-    & .card-options {
-      justify-content: space-between;
-    }
-
-    & .card-options .icon {
-      margin-inline-start: 5px;
-    }
-  }
 }
 
 .categories-column {
   justify-content: space-evenly;
+}
+
+.news-card {
+  background-color: #ffffff;
+  box-shadow: 0px 16px 26px #00000029;
+  border-radius: 24px;
+  height: 470px;
+  // width: 200px;
+  border: none;
+
+  & .new-card-image {
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+    height: 370px;
+  }
+  & .card-text {
+    height: 80px;
+    color: #5e6282;
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  & .card-text:hover {
+    color: #13beff;
+    border-bottom: 1px solid 13beff;
+    cursor: pointer;
+  }
+  & .date-wrapper {
+    display: flex;
+
+    & .date-icon {
+      color: #13beff;
+      font-size: 25px;
+    }
+    & .date-text {
+      color: #707070;
+      font-size: 18px;
+      margin-inline-start: 10px;
+    }
+  }
+
+  & .card-options {
+    justify-content: space-between;
+  }
+
+  & .card-options .icon {
+    margin-inline-start: 5px;
+    cursor: pointer;
+  }
+}
+
+.new-details-section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  & .main {
+    padding-block: 50px;
+    width: 100%;
+    height: 100%;
+  }
+  & .new-img-details{
+    border-radius: 100%;
+  }
+
+  & .new-card-details{
+    padding: 20px 50px;
+    height: 600px
+  }
 }

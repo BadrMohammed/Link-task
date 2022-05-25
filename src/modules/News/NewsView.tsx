@@ -13,33 +13,41 @@ import { CustomButton } from '../../components/CustomButton/CustomButton';
 import { local } from '../../lang/local';
 import { RiCalendar2Fill } from 'react-icons/ri';
 import { FaRegHeart } from 'react-icons/fa';
-import { BsFillShareFill } from 'react-icons/bs';
 import { CustomBadge } from '../../components/CustomBadge/CustomBadge';
 import logo from '../../assets/images/news/logo.png';
 import { rightReverse } from '../../styles/generalStyle';
+import { useHistory } from 'react-router-dom';
+import { getDefaultItem } from '../../utils/get-default-item';
+import { Share } from '../../components/Share/Share';
 export const NewsView = ({
   newsState,
   fetchNews,
   dispatch,
   loading,
   setLoading,
+  getNew,
+  addToFavourite,
 }: any) => {
   const [view, setView] = useState<Number>(5);
-
+  const history = useHistory();
   const toggleView = (e: any, value: any) => setView(value);
   const handleClick = (e: any, param: any) => {
     fetchNews(dispatch, param, setLoading);
   };
 
-  const getDefaultItem = (id: any) => {
-    if (newsState.categories) {
-      let entry = newsState.categories.find((e: any) => e.id === +id);
+  const openDetails = (e: any, item: any) => {
+    dispatch(getNew(item));
+    history.push('/new-details');
+  };
 
-      if (entry) {
-        return entry.name;
-      }
+  const handleFavourite = (e: any, item: any) => {
+    let newArry = [...newsState.favourite_list];
+    if (newArry.find((f: any) => f.id === item.id)) {
+      newArry = newArry.filter((it: any) => it.id !== item.id);
+    } else {
+      newArry.push(item);
     }
-    return '';
+    dispatch(addToFavourite(newArry));
   };
   return (
     <section className='news-section'>
@@ -122,7 +130,9 @@ export const NewsView = ({
                                 width='100%'
                               />
                               <CardBody>
-                                <CardText>{item.title}</CardText>
+                                <CardText onClick={(e) => openDetails(e, item)}>
+                                  {item.title}
+                                </CardText>
                                 <div className='date-wrapper'>
                                   <RiCalendar2Fill className='date-icon' />
                                   <p className='date-text'>
@@ -133,17 +143,25 @@ export const NewsView = ({
                                 <div className='card-options center'>
                                   <CustomBadge
                                     className='news-card-badge'
-                                    title={getDefaultItem(item.categoryID)}
+                                    title={getDefaultItem(
+                                      item.categoryID,
+                                      newsState.categories,
+                                      'name'
+                                    )}
                                   />
-                                  <span>
+                                  <span className='flex alignItem'>
                                     <FaRegHeart
-                                      color='#13BEFF'
+                                      color={
+                                        newsState.favourite_list.find(
+                                          (f: any) => f.id === item.id
+                                        )
+                                          ? 'red'
+                                          : '#13BEFF'
+                                      }
                                       className='icon'
+                                      onClick={(e) => handleFavourite(e, item)}
                                     />
-                                    <BsFillShareFill
-                                      color='#13BEFF'
-                                      className='icon'
-                                    />
+                                    <Share />
                                   </span>
                                 </div>
                               </CardBody>

@@ -17,7 +17,9 @@ export const NewsController = () => {
   return (
     <NewsView
       newsState={newsState}
+      getNew={newsSlice.actions.getNew}
       fetchNews={fetchNews}
+      addToFavourite={newsSlice.actions.addToFavourite}
       dispatch={dispatch}
       loading={loading}
       setLoading={setLoading}

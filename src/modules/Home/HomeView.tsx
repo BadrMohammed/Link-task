@@ -2,7 +2,11 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './Home.scss';
 import { HomeBanner } from '../../assets/icons/HomeBanner';
 import { Row, Col } from 'reactstrap';
-import { dashIconStyle, dirRightReverse, rightReverse } from '../../styles/generalStyle';
+import {
+  dashIconStyle,
+  dirRightReverse,
+  rightReverse,
+} from '../../styles/generalStyle';
 import { Carousel } from 'react-responsive-carousel';
 import { local } from '../../lang/local';
 import { FaPlay } from 'react-icons/fa';
@@ -12,8 +16,7 @@ import h1 from '../../assets/images/home/h1.png';
 import { DashIcon } from '../../assets/icons/DashIcon';
 import { useState } from 'react';
 export const HomeView = ({ homeState, loading }: any) => {
-
-  const [repeat,setRepeat]=useState<any>('infinite')
+  const [repeat, setRepeat] = useState<any>('infinite');
   return (
     <Carousel
       emulateTouch
@@ -23,12 +26,11 @@ export const HomeView = ({ homeState, loading }: any) => {
       swipeable
       useKeyboardArrows
       showThumbs={false}
-      onSwipeStart={()=>setRepeat(false)}
-      onSwipeEnd={()=>setRepeat(true)}
->
+      onSwipeStart={() => setRepeat(false)}
+      onSwipeEnd={() => setRepeat(true)}
+    >
       {homeState.data &&
-        homeState.data.map((item: any,index:any) => {
-  
+        homeState.data.map((item: any, index: any) => {
           return (
             <section className='home-section' key={index}>
               <div className='icon-container' style={rightReverse}>
@@ -42,7 +44,7 @@ export const HomeView = ({ homeState, loading }: any) => {
 
               <div className='container'>
                 <div className='home-main'>
-                  <Row > 
+                  <Row>
                     <Col xl={6} lg={6} md={8} sm={12} xs={12}>
                       <Row>
                         <Col
@@ -62,11 +64,11 @@ export const HomeView = ({ homeState, loading }: any) => {
                             {item.category}
                           </h5>
                         </Col>
-                        <Col
-                          className='mt-3 dash-col'>
+                        <Col className='mt-3 dash-col'>
                           <h1 className='home-title'>{item.title}</h1>
-                          <div className='dash-container-icon' 
-                          style={dashIconStyle}
+                          <div
+                            className='dash-container-icon'
+                            style={dashIconStyle}
                           >
                             <DashIcon
                               className='imgFull'
@@ -90,10 +92,13 @@ export const HomeView = ({ homeState, loading }: any) => {
                       <Row>
                         <Col className='mb-5'>
                           <div className='play-container flex alignItem'>
-                            <CustomButton
-                              title={local.findOut}
+                            <a
+                              href={window.location.href}
+                              target="_blank"
                               className='view-all-news-button search-button'
-                            />
+                            >
+                              {local.findOut}
+                            </a>
 
                             <div className='play-icon'>
                               <FaPlay color='#fff' />
@@ -105,11 +110,7 @@ export const HomeView = ({ homeState, loading }: any) => {
                     </Col>
                     <Col xl={6} lg={6} md={4} sm={12} xs={12}>
                       <div className='fullWH'>
-                        <img
-                          src={h1}
-                          className='imgFull'
-                          alt=''
-                        />
+                        <img src={h1} className='imgFull' alt='' />
                       </div>
                     </Col>
                   </Row>

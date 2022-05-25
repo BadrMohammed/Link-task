@@ -22,7 +22,7 @@ const Header = ({ handleToggleSidebar }: any) => {
         <NavLink
           style={{ color: 'white' }}
           className='cursor'
-          onClick={() => history.push(path)}
+          onClick={() => history.push('/')}
         >
           {local[title]}
         </NavLink>
