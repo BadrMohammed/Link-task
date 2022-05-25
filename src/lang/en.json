@@ -36,5 +36,11 @@
   "apple":"Apple",
   "rights":"All rights reserved@Linkdevelopment.com",
   "findOut":"Find out more",
-  "playDemo":"Play Demo"
+  "playDemo":"Play Demo",
+  "title":"Title",
+  "description":"Description",
+  "content":"Content",
+  "publishedDate":"Published Date",
+  "category":"Category"
+
 }

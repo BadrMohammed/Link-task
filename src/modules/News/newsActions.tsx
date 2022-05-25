@@ -16,4 +16,14 @@ const GET_NEWS = (state: any, action: PayloadAction<any>) => {
   state.active_category = id;
 };
 
-export { GET_CATEGORIES, GET_NEWS };
+const GET_NEW = (state: any, action: PayloadAction<any>) => {
+  state.new_details = action.payload;
+};
+
+
+const ADD_TO_FAVOURITE = (state: any, action: PayloadAction<any>) => {
+  state.favourite_list = action.payload;
+};
+
+
+export { GET_CATEGORIES, GET_NEWS, GET_NEW ,ADD_TO_FAVOURITE};

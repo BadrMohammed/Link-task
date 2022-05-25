@@ -36,5 +36,10 @@
   "apple": "متجر ابل",
   "rights": "كل الحقوق محفوظة لدي reserved@Linkdevelopment.com",
   "findOut":"اكتشف المزيد",
-  "playDemo":"فديو تجريبي"
+  "playDemo":"فديو تجريبي",
+  "title":"العنوان",
+  "description":"الوصف",
+  "content":"المحتوي",
+  "publishedDate":"تاريخ النشر",
+  "category":"المجال"
 }

@@ -1,11 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 // Imported actions
-import { GET_CATEGORIES, GET_NEWS } from './newsActions';
+import { GET_CATEGORIES, GET_NEWS ,GET_NEW, ADD_TO_FAVOURITE} from './newsActions';
 
 const initialState = {
   news: [],
   categories: [],
   active_category: '0',
+  new_details: {},
+  favourite_list:[]
 };
 
 export const newsSlice = createSlice({
@@ -14,6 +16,8 @@ export const newsSlice = createSlice({
   reducers: {
     getCategories: GET_CATEGORIES,
     getNews: GET_NEWS,
+    getNew:GET_NEW,
+    addToFavourite:ADD_TO_FAVOURITE
   },
 });
 
