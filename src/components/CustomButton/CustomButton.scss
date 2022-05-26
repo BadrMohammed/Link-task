@@ -58,12 +58,13 @@
   border: none;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 110px;
+  justify-content:space-evenly;
+  // max-width: 110px;
+  width: 140px;
   height: 40px;
   font-size: 10px;
   margin-inline: 3px;
-  margin-top: 5px;
+  margin-top: 5px;direction: ltr;
 }
 
 

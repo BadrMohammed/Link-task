@@ -108,7 +108,7 @@ export const Footer = () => {
               {['News', 'Photo', 'Video'].map((item, index) => {
                 return (
                   <div className='footer-section-item mt-4' key={index}>
-                    <p>{item}</p>
+                    <p>{local[item]}</p>
                   </div>
                 );
               })}
