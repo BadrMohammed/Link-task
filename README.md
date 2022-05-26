@@ -20,3 +20,5 @@ project build using React Library
 to understand project structure
 
 7- some images is missing in banners api (centered images)
+
+8- web application support english and arabic langauge
