@@ -14,16 +14,16 @@ images and video in banner api is missing
 
 2 - Clone the project on your machine, then from the terminal window go to the application directory then to the sub-directory called `Source` then run the following command `npm install` to install the dependencies as defined in the package.json file.
 
-3 - From the `Source` directory go to `env` folder and create `.env.development` file for environment variables, see the `.env.dist` as an example.
+<!-- 3 - From the `Source` directory go to `env` folder and create `.env.development` file for environment variables, see the `.env.dist` as an example. -->
 
-4 - Then run `npm start` from `Source` root and it will run the application and navigate you to `http://localhost:3000/` server.
+3 - Then run `npm start` from `project folder` root and it will run the application and navigate you to `http://localhost:3000/` server.
 
-5- to build project run `npm run build`
+4- to build project run `npm run build`
 
-6- projcect is build using mvc design patterns
+5- projcect is build using mvc design patterns
 
-7- you can see the dependency digram for projcect inside documentationa folder
+6- you can see the dependency digram for projcect inside documentationa folder
 to understand project structure
 
-8- some images is missing in banners api (centered images)
+7- some images is missing in banners api (centered images)
 
